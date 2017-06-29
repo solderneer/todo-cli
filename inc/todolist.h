@@ -25,7 +25,7 @@ public:
     void setPrevElement(TodoElement *prevElem);
 
     
-    TodoElement(string timeStamp, string todoText, TodoElement* ptr);
+    TodoElement(string timeStamp, string todoText);
     TodoElement();
     ~TodoElement();
 };

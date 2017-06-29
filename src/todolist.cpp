@@ -1,22 +1,22 @@
 #include "todolist.h"
 
 int TodoElement::noOfElements = 0;
-TodoElement *TodoElement::latestElem = nullptr; 
+TodoElement *TodoElement::latestElem = nullptr;
 
-TodoElement::TodoElement(string timeStamp, string todoText, TodoElement* ptr)
+TodoElement::TodoElement(string timeStamp, string todoText)
 {
     if(noOfElements == 0)
     {
-        latestElem = ptr;
+        latestElem = this;
         this->setPrevElement(nullptr);
         this->setNextElement(nullptr);
     }
     else
     {
-       latestElem->setNextElement(ptr);
+       latestElem->setNextElement(this);
        this->setPrevElement(latestElem);
        this->setNextElement(nullptr);
-       latestElem = ptr;
+       latestElem = this;
    }
 
    this->timeStamp = timeStamp;
