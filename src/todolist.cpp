@@ -2,7 +2,7 @@
 
 TodoElement::TodoElement(string timeStamp, string todoText, TodoElement* ptr)
 {
-    (*latestElem)->setNextElement(ptr);
+    latestElem->setNextElement(ptr);
     this->setPrevElement(latestElem);
     latestElem = ptr;
 
