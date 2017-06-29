@@ -4,5 +4,16 @@
 		{
 			"path": "."
 		}
-	]
+	],
+
+    "settings":
+    {
+        "ecc_cpp_flags":
+        [
+            "-std=c++11",
+            "-I/Users/solderneer/Documents/Projects/todo-cli/inc"
+        ],
+        "ecc_use_libclang": true,
+        "show_type_info": true
+    }
 }

@@ -4,16 +4,24 @@
 		"selected_items":
 		[
 			[
+				"null",
+				"NULL\tNULL"
+			],
+			[
+				"get",
+				"getHeight"
+			],
+			[
+				"s",
+				"setName\tvoid setName(string Name)"
+			],
+			[
 				"wid",
 				"width"
 			],
 			[
 				"background",
 				"background-color"
-			],
-			[
-				"s",
-				"src\tAttr"
 			],
 			[
 				"section",
@@ -36,10 +44,6 @@
 				"FF6D00"
 			],
 			[
-				"get",
-				"getElementById"
-			],
-			[
 				"backgro",
 				"background-color"
 			],
@@ -59,6 +63,33 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "inc/todolist.h",
+			"settings":
+			{
+				"buffer_size": 417,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/todolist.cpp",
+			"settings":
+			{
+				"buffer_size": 21,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "#include \"todolist.h\""
+			}
+		},
+		{
+			"file": "src/main.cpp",
+			"settings":
+			{
+				"buffer_size": 1275,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -190,10 +221,16 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/solderneer/Documents/Projects/todo-cli"
+		"/Users/solderneer/Documents/Projects/todo-cli",
+		"/Users/solderneer/Documents/Projects/todo-cli/inc",
+		"/Users/solderneer/Documents/Projects/todo-cli/src"
 	],
 	"file_history":
 	[
+		"/Users/solderneer/Documents/Projects/todo-cli/src/todolist.h",
+		"/Users/solderneer/Documents/Projects/todo-cli/main.cpp",
+		"/Users/solderneer/Documents/Projects/todo-cli/todocli.sublime-project",
+		"/Users/solderneer/Library/Application Support/Sublime Text 3/Packages/User/SublimeClang.sublime-settings",
 		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/main.css",
 		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/js/material-photo-gallery.js",
 		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/js/main.js",
@@ -282,8 +319,99 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "inc/todolist.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 417,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/todolist.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21,
+								21
+							]
+						],
+						"settings":
+						{
+							"auto_name": "#include \"todolist.h\"",
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/main.cpp",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1275,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
