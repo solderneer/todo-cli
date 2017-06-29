@@ -1,0 +1,384 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"wid",
+				"width"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"s",
+				"src\tAttr"
+			],
+			[
+				"section",
+				"section-subheader"
+			],
+			[
+				"stroke",
+				"strokeWidth"
+			],
+			[
+				"content",
+				"content"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"f",
+				"FF6D00"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"backgro",
+				"background-color"
+			],
+			[
+				"container",
+				"container-fluid"
+			],
+			[
+				"white",
+				"w3cRGBa:white\tW3C white (RGBa)"
+			],
+			[
+				"r",
+				"ralHex:1004\tRAL 1004 (Hex)"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"SublimeAVR",
+					""
+				],
+				[
+					"SublimeAVR",
+					"Rebuild"
+				],
+				[
+					"SublimeAVR",
+					"Clean"
+				],
+				[
+					"SublimeAVR",
+					"Debug"
+				],
+				[
+					"SublimeAVR",
+					"Run"
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"SublimeAVR",
+				"Debug"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 203.0,
+		"last_filter": "pACK",
+		"selected_items":
+		[
+			[
+				"pACK",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Snippet: Do While Loop"
+			],
+			[
+				"avr",
+				"Build With: SublimeAVR"
+			],
+			[
+				"Pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Packa",
+				"Package Control: List Packages"
+			],
+			[
+				"AVR",
+				"AVR: Create/Update Project"
+			],
+			[
+				"Packag",
+				"Package Control: Install Package"
+			],
+			[
+				"Subl",
+				"SublimeGDB: Open Breakpoint View"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"ter",
+				"Terminal: Open"
+			],
+			[
+				"Sublime",
+				"SublimeLinter: Enable Linting"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"t",
+				"Terminal: Open"
+			]
+		],
+		"width": 462.0
+	},
+	"console":
+	{
+		"height": 141.0,
+		"history":
+		[
+			"quit",
+			"ls"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/solderneer/Documents/Projects/todo-cli"
+	],
+	"file_history":
+	[
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/main.css",
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/js/material-photo-gallery.js",
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/js/main.js",
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/gallery.css",
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/index.html",
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/assets/sentibots.jpg",
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/social-nav.css",
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/index.html",
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/style.css",
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/timeline.css",
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/progress.css",
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/css/bootstrap.css",
+		"/Users/solderneer/Projects/test-avr/main.c",
+		"/Users/solderneer/Library/Application Support/Sublime Text 3/Packages/AVR/SublimeAVR.sublime-settings",
+		"/Users/solderneer/Desktop/hopetechnik/Low_Level_Controller_Testing/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c",
+		"/Users/solderneer/Desktop/hopetechnik/Low_Level_Controller_Testing/Src/can.c",
+		"/Users/solderneer/Desktop/hopetechnik/Low_Level_Controller_Testing/Src/main.c",
+		"/Users/solderneer/Library/Application Support/Sublime Text 3/Packages/User/SublimeAVR.sublime-settings",
+		"/Users/solderneer/Desktop/hopetechnik/Low_Level_Controller_Testing/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h",
+		"/Users/solderneer/Desktop/hopetechnik/Low_Level_Controller_Testing/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h",
+		"/Users/solderneer/Desktop/hopetechnik/Low_Level_Controller_Testing/LLC_test.sublime-project",
+		"/Users/solderneer/Desktop/hopetechnik/Low_Level_Controller_Testing/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h",
+		"/Users/solderneer/Desktop/Hope Technik/Low_Level_Controller_Testing/Inc/interface.h",
+		"/Users/solderneer/Desktop/Hope Technik/Low_Level_Controller_Testing/Src/interface.c",
+		"/Users/solderneer/Desktop/Hope Technik/Low_Level_Controller_Testing/Src/main.c",
+		"/Users/solderneer/Desktop/Hope Technik/Low_Level_Controller_Testing/Src/can.c",
+		"/Users/solderneer/Desktop/Hope Technik/Low_Level_Controller_Testing/Inc/can.h",
+		"/Users/solderneer/Desktop/Hope Technik/Low_Level_Controller_Testing/Inc/motor.h",
+		"/Users/solderneer/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/solderneer/Desktop/Hope Technik/Low_Level_Controller_Testing/Src/motor.c",
+		"/Users/solderneer/Desktop/Hope Technik/agv_motion_controller/src/control.c",
+		"/Users/solderneer/Desktop/Hope Technik/Low_Level_Controller_Testing/Inc/main.h",
+		"/Users/solderneer/Desktop/Hope Technik/Low_Level_Controller_Testing/Inc/ringbuffer.h",
+		"/Users/solderneer/Projects/Low_Level_Controller_Testing/Src/main.c",
+		"/Users/solderneer/Projects/test/Src/main.c",
+		"/Users/solderneer/Library/Application Support/Sublime Text 3/Packages/User/SublimeGDB.sublime-settings",
+		"/Users/solderneer/Projects/test/stm32-test.sublime-project",
+		"/Users/solderneer/Projects/test/Makefile",
+		"/Users/solderneer/Library/Application Support/Sublime Text 3/Packages/User/Terminal.sublime-settings",
+		"/Users/solderneer/Library/Application Support/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/Users/solderneer/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/solderneer/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/solderneer/.path",
+		"/Users/solderneer/.vimrc"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 95.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"click",
+			"cick",
+			"330",
+			"330px",
+			"40vh",
+			"font",
+			"color",
+			"MODE",
+			"vTaskDelay"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"HAL_Delay"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 114.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 114.0
+	},
+	"pinned_build_system": "",
+	"project": "todocli.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/Projects/KerbalKontrol/code/io-board/SublimeAVR.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 244.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
