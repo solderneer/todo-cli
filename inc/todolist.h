@@ -12,6 +12,7 @@ private:
     TodoElement *prevElem;
 
     static TodoElement *latestElem;
+    static int noOfElements;
 public:
     string getTimeStamp();
     string getTodoText();

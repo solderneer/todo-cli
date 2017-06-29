@@ -1,13 +1,38 @@
 #include "todolist.h"
 
+int TodoElement::noOfElements = 0;
+TodoElement *TodoElement::latestElem = nullptr; 
+
 TodoElement::TodoElement(string timeStamp, string todoText, TodoElement* ptr)
 {
-    latestElem->setNextElement(ptr);
-    this->setPrevElement(latestElem);
-    latestElem = ptr;
+    if(noOfElements == 0)
+    {
+        latestElem = ptr;
+        this->setPrevElement(nullptr);
+        this->setNextElement(nullptr);
+    }
+    else
+    {
+       latestElem->setNextElement(ptr);
+       this->setPrevElement(latestElem);
+       this->setNextElement(nullptr);
+       latestElem = ptr;
+   }
 
-    this->timeStamp = timeStamp;
-    this->todoText = todoText;
+   this->timeStamp = timeStamp;
+   this->todoText = todoText;
+
+   noOfElements++;
+}
+
+TodoElement::TodoElement()
+{
+    cout << "TodoElement initialized with null everything" <<endl;
+}
+
+TodoElement::~TodoElement()
+{
+    cout << "TodoElement destroyed" <<endl;
 }
 
 string TodoElement::getTodoText()
