@@ -7,6 +7,7 @@ class TodoElement{
 private:
     string timeStamp;
     string todoText;
+    int index;
 
     TodoElement *nextElem;
     TodoElement *prevElem;
@@ -18,6 +19,7 @@ public:
     string getTodoText();
     TodoElement *getNextElement();
     TodoElement *getPrevElement();
+    int getIndex();
 
     void setTodoText(string todoText);
     void setTimeStamp(string timeStamp);
@@ -29,3 +31,14 @@ public:
     TodoElement();
     ~TodoElement();
 };
+
+typedef enum {
+    TIMESTAMP,
+    PRIORITY
+} Sort_TypeDef;
+
+TodoElement *Todo_Init();
+void Todo_AddElement(string timeStamp, string todoText);
+void Todo_RemoveElement(TodoElement *remove);
+void Todo_SortElements(Sort_TypeDef selected);
+void Todo_MoveElement(int indexStart, int indexEnd);

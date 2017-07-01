@@ -5,72 +5,78 @@ TodoElement *TodoElement::latestElem = nullptr;
 
 TodoElement::TodoElement(string timeStamp, string todoText)
 {
-    if(noOfElements == 0)
-    {
-        latestElem = this;
-        this->setPrevElement(nullptr);
-        this->setNextElement(nullptr);
-    }
-    else
-    {
-       latestElem->setNextElement(this);
-       this->setPrevElement(latestElem);
-       this->setNextElement(nullptr);
-       latestElem = this;
-   }
+  if(noOfElements == 0)
+  {
+    latestElem = this;
+    this->setPrevElement(nullptr);
+    this->setNextElement(nullptr);
+  }
+  else
+  {
+   latestElem->setNextElement(this);
+   this->setPrevElement(latestElem);
+   this->setNextElement(nullptr);
+   latestElem = this;
+ }
 
-   this->timeStamp = timeStamp;
-   this->todoText = todoText;
+ this->timeStamp = timeStamp;
+ this->todoText = todoText;
+ this->index = noOfElements;
 
-   noOfElements++;
+ noOfElements++;
 }
 
 TodoElement::TodoElement()
 {
-    cout << "TodoElement initialized with null everything" <<endl;
+  cout << "TodoElement initialized with null everything" <<endl;
 }
 
 TodoElement::~TodoElement()
 {
-    cout << "TodoElement destroyed" <<endl;
+  cout << "TodoElement destroyed" <<endl;
 }
 
 string TodoElement::getTodoText()
 {
-    return todoText;
+  return todoText;
 }
 
 void TodoElement::setTodoText(string todoText)
 {
-    this->todoText = todoText;
+  this->todoText = todoText;
 }
 
 string TodoElement::getTimeStamp()
 {
-    return timeStamp;
+  return timeStamp;
 }
 
 void TodoElement::setTimeStamp(string timeStamp)
 {
-    this->timeStamp = timeStamp;
+  this->timeStamp = timeStamp;
 }
 
 TodoElement *TodoElement::getNextElement()
 {
-    return nextElem;
+  return nextElem;
 }
 
 void TodoElement::setNextElement(TodoElement *nextElem)
 {
-    this->nextElem = nextElem;
+  this->nextElem = nextElem;
 }
 
 TodoElement *TodoElement::getPrevElement()
 {
-    return prevElem;
+  return prevElem;
 }
 
 void TodoElement::setPrevElement(TodoElement *prevElem)
 {
-    this->prevElem = prevElem;
+  this->prevElem = prevElem;
+}
+
+int TodoElement::getIndex()
+{
+  return index;
 }
