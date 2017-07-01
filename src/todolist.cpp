@@ -21,7 +21,6 @@ TodoElement::TodoElement(string timeStamp, string todoText)
 
  this->timeStamp = timeStamp;
  this->todoText = todoText;
- this->index = noOfElements;
 
  noOfElements++;
 }
@@ -74,9 +73,4 @@ TodoElement *TodoElement::getPrevElement()
 void TodoElement::setPrevElement(TodoElement *prevElem)
 {
   this->prevElem = prevElem;
-}
-
-int TodoElement::getIndex()
-{
-  return index;
 }

@@ -7,7 +7,6 @@ class TodoElement{
 private:
     string timeStamp;
     string todoText;
-    int index;
 
     TodoElement *nextElem;
     TodoElement *prevElem;
@@ -19,7 +18,6 @@ public:
     string getTodoText();
     TodoElement *getNextElement();
     TodoElement *getPrevElement();
-    int getIndex();
 
     void setTodoText(string todoText);
     void setTimeStamp(string timeStamp);
