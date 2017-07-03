@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"null",
+				"nullptr"
+			],
+			[
+				"g",
+				"getNextElement\tTodoElement * getNextElement()"
+			],
+			[
+				"get",
+				"getTodoText\tstring getTodoText()"
+			],
+			[
 				"tOD",
 				"TodoElement"
 			],
@@ -12,20 +24,12 @@
 				"setNextElement"
 			],
 			[
-				"get",
-				"getIndex\tint getIndex()"
-			],
-			[
 				"next",
 				"nextptr\tTodoElement * nextptr"
 			],
 			[
 				"first",
 				"firstElem\tTodoElement firstElem"
-			],
-			[
-				"null",
-				"nullptr\tstd::nullptr_t nullptr"
 			],
 			[
 				"todo",
@@ -87,7 +91,7 @@
 			"file": "src/todolist.cpp",
 			"settings":
 			{
-				"buffer_size": 1489,
+				"buffer_size": 2065,
 				"encoding": "UTF-8",
 				"line_ending": "Unix",
 				"name": "#include \"todolist.h\""
@@ -97,7 +101,7 @@
 			"file": "inc/todolist.h",
 			"settings":
 			{
-				"buffer_size": 721,
+				"buffer_size": 774,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -106,7 +110,7 @@
 			"file": "src/main.cpp",
 			"settings":
 			{
-				"buffer_size": 218,
+				"buffer_size": 879,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -359,15 +363,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1489,
+						"buffer_size": 2065,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								22,
-								22
+								1618,
+								1618
 							]
 						],
 						"settings":
@@ -379,10 +383,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1114.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -391,15 +395,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 721,
+						"buffer_size": 774,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								59,
-								59
+								38,
+								38
 							]
 						],
 						"settings":
@@ -413,7 +417,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -422,15 +426,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 218,
+						"buffer_size": 879,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								214,
-								214
+								655,
+								655
 							]
 						],
 						"settings":
@@ -475,7 +479,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
