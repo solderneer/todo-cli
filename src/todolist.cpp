@@ -2,7 +2,6 @@
 
 int TodoElement::noOfElements = 0;
 TodoElement *TodoElement::latestElem = nullptr;
-static TodoElement firstElem;
 
 TodoElement::TodoElement(string timeStamp, string todoText)
 {
@@ -37,6 +36,8 @@ TodoElement::TodoElement()
 
 TodoElement::~TodoElement()
 {
+  // this->prevElem->nextElem = this->nextElem;
+  // this->nextElem->prevElem = this->prevElem;
   cout << "TodoElement destroyed" <<endl;
 }
 
@@ -78,4 +79,37 @@ TodoElement *TodoElement::getPrevElement()
 void TodoElement::setPrevElement(TodoElement *prevElem)
 {
   this->prevElem = prevElem;
+}
+
+void TodoElement::DeleteElement()
+{
+
+  if((this->nextElem != nullptr) && (this->prevElem != nullptr))
+  {
+    this->prevElem->nextElem = this->nextElem;
+    this->nextElem->prevElem = this->prevElem;
+  }
+  else if((this->nextElem == nullptr) && (this->prevElem == nullptr))
+  {
+    //Do Nothing
+  }
+  else if(this->nextElem == nullptr)
+  {
+    this->prevElem->nextElem = nullptr;
+  }
+  else if(this->prevElem == nullptr)
+  {
+    this->nextElem->prevElem = nullptr;
+  }
+  else
+  {
+
+  }
+  noOfElements--;
+
+}
+
+int TodoElement::getElementCount()
+{
+  return noOfElements;
 }

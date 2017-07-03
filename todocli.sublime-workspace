@@ -4,16 +4,20 @@
 		"selected_items":
 		[
 			[
+				"tOD",
+				"TodoElement"
+			],
+			[
+				"set",
+				"setNextElement"
+			],
+			[
 				"get",
 				"getIndex\tint getIndex()"
 			],
 			[
 				"next",
 				"nextptr\tTodoElement * nextptr"
-			],
-			[
-				"set",
-				"setNextElement\tvoid setNextElement(TodoElement *nextElem)"
 			],
 			[
 				"first",
@@ -83,7 +87,7 @@
 			"file": "src/todolist.cpp",
 			"settings":
 			{
-				"buffer_size": 1316,
+				"buffer_size": 1489,
 				"encoding": "UTF-8",
 				"line_ending": "Unix",
 				"name": "#include \"todolist.h\""
@@ -93,7 +97,7 @@
 			"file": "inc/todolist.h",
 			"settings":
 			{
-				"buffer_size": 984,
+				"buffer_size": 721,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -102,7 +106,7 @@
 			"file": "src/main.cpp",
 			"settings":
 			{
-				"buffer_size": 811,
+				"buffer_size": 218,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -346,7 +350,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -355,15 +359,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1316,
+						"buffer_size": 1489,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								135,
-								135
+								22,
+								22
 							]
 						],
 						"settings":
@@ -378,7 +382,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -387,15 +391,46 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 984,
+						"buffer_size": 721,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								984,
-								984
+								59,
+								59
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/main.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 218,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								214,
+								214
 							]
 						],
 						"settings":
@@ -413,37 +448,6 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "src/main.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 811,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								779,
-								779
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
 					"buffer": 3,
 					"file": "todocli.sublime-project",
 					"semi_transient": false,
@@ -456,8 +460,8 @@
 						"selection":
 						[
 							[
-								143,
-								192
+								269,
+								269
 							]
 						],
 						"settings":
@@ -471,7 +475,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -544,7 +548,7 @@
 		[
 			[
 				"",
-				"~/Documents/Projects/solderneer.github.io/homepage.sublime-project"
+				"~/Documents/Projects/KerbalKontrol/code/io-board/SublimeAVR.sublime-project"
 			]
 		],
 		"width": 380.0

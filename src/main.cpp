@@ -7,19 +7,27 @@
 
 using namespace std;
 
-
 int main(void)
 {
-    TodoElement firstElem = TodoElement("00:00:00", "do my laundy");
-    TodoElement secondElem = TodoElement("00:00:01", "do my homework");
-    TodoElement thirdElem = TodoElement("00:00:01", "do my work");
+    TodoElement firstElement = TodoElement("00:00:00", "do my laundry");
+    TodoElement secondElement = TodoElement("00:00:01", "do my laundry");
+    TodoElement thirdElement = TodoElement("00:00:02", "do my laundry");
+    TodoElement fourthElement = TodoElement("00:00:03", "do my laundry");
 
+    TodoElement* nextptr = (&firstElement);
 
-    cout << "The first todo is to " << firstElem.getTodoText() << " at " << firstElem.getTimeStamp() << endl;
-    cout << "The next todo element is at address " << firstElem.getNextElement() << endl;
+    for(int i = 0; i < nextptr->getElementCount(); i++)
+    {
+        cout << nextptr -> getTimeStamp() << endl;
+        nextptr = nextptr -> getNextElement();
+    }
 
-    TodoElement *nextptr = firstElem.getNextElement();
+    fourthElement.DeleteElement();
+    nextptr = (&firstElement);
 
-    cout << "The second todo is to " << secondElem.getTodoText() << " at " << secondElem.getTimeStamp() << endl;
-    cout << "The next todo element is at address " << secondElem.getNextElement() << endl;
+    for(int i = 0; i < nextptr->getElementCount(); i++)
+    {
+        cout << nextptr -> getTimeStamp() << endl;
+        nextptr = nextptr -> getNextElement();
+    }
 }

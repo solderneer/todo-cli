@@ -18,11 +18,13 @@ public:
     string getTodoText();
     TodoElement *getNextElement();
     TodoElement *getPrevElement();
+    int getElementCount();
 
     void setTodoText(string todoText);
     void setTimeStamp(string timeStamp);
     void setNextElement(TodoElement *nextElem);
     void setPrevElement(TodoElement *prevElem);
+    void DeleteElement();
 
     
     TodoElement(string timeStamp, string todoText);
