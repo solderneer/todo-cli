@@ -5,7 +5,7 @@
 		[
 			[
 				"get",
-				"getNextElement\tTodoElement * getNextElement()"
+				"getIndex\tint getIndex()"
 			],
 			[
 				"next",
@@ -83,7 +83,7 @@
 			"file": "src/todolist.cpp",
 			"settings":
 			{
-				"buffer_size": 1352,
+				"buffer_size": 1316,
 				"encoding": "UTF-8",
 				"line_ending": "Unix",
 				"name": "#include \"todolist.h\""
@@ -93,7 +93,7 @@
 			"file": "inc/todolist.h",
 			"settings":
 			{
-				"buffer_size": 660,
+				"buffer_size": 984,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -346,7 +346,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -355,28 +355,30 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1352,
+						"buffer_size": 1316,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								541,
-								541
+								135,
+								135
 							]
 						],
 						"settings":
 						{
 							"auto_name": "#include \"todolist.h\"",
 							"git_gutter_is_enabled": true,
-							"syntax": "Packages/C++/C++.sublime-syntax"
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -385,15 +387,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 660,
+						"buffer_size": 984,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								464,
-								464
+								984,
+								984
 							]
 						],
 						"settings":
@@ -407,7 +409,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -438,7 +440,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -461,7 +463,9 @@
 						"settings":
 						{
 							"git_gutter_is_enabled": true,
-							"syntax": "Packages/zzz A File Icon zzz/aliases/JSON (Sublime).sublime-syntax"
+							"syntax": "Packages/zzz A File Icon zzz/aliases/JSON (Sublime).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -540,7 +544,7 @@
 		[
 			[
 				"",
-				"~/Documents/Projects/KerbalKontrol/code/io-board/SublimeAVR.sublime-project"
+				"~/Documents/Projects/solderneer.github.io/homepage.sublime-project"
 			]
 		],
 		"width": 380.0

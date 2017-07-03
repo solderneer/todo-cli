@@ -2,6 +2,7 @@
 
 int TodoElement::noOfElements = 0;
 TodoElement *TodoElement::latestElem = nullptr;
+static TodoElement firstElem;
 
 TodoElement::TodoElement(string timeStamp, string todoText)
 {
@@ -28,6 +29,10 @@ TodoElement::TodoElement(string timeStamp, string todoText)
 TodoElement::TodoElement()
 {
   cout << "TodoElement initialized with null everything" <<endl;
+  this->timeStamp = "";
+  this->todoText = "";
+  this->setPrevElement(nullptr);
+  this->setNextElement(nullptr);
 }
 
 TodoElement::~TodoElement()
