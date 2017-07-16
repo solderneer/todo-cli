@@ -87,43 +87,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "src/todolist.cpp",
-			"settings":
-			{
-				"buffer_size": 2065,
-				"encoding": "UTF-8",
-				"line_ending": "Unix",
-				"name": "#include \"todolist.h\""
-			}
-		},
-		{
-			"file": "inc/todolist.h",
-			"settings":
-			{
-				"buffer_size": 774,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/main.cpp",
-			"settings":
-			{
-				"buffer_size": 879,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "todocli.sublime-project",
-			"settings":
-			{
-				"buffer_size": 278,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -255,16 +218,18 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/solderneer/Documents/Projects/todo-cli",
-		"/Users/solderneer/Documents/Projects/todo-cli/inc",
-		"/Users/solderneer/Documents/Projects/todo-cli/src"
+		"/Users/solderneer/Documents/Projects/todo-cli"
 	],
 	"file_history":
 	[
+		"/Users/solderneer/Documents/Projects/todo-cli/todocli.sublime-project",
+		"/Users/solderneer/Documents/Projects/todo-cli/src/main.cpp",
 		"/Users/solderneer/Documents/Projects/todo-cli/inc/todolist.h",
+		"/Users/solderneer/Documents/Projects/todo-cli/.gitignore",
+		"/Users/solderneer/Documents/Projects/todo-cli/src/todolist.cpp",
+		"/Users/solderneer/Documents/Projects/todo-cli/.gdb_history",
 		"/Users/solderneer/Documents/Projects/todo-cli/src/todolist.h",
 		"/Users/solderneer/Documents/Projects/todo-cli/main.cpp",
-		"/Users/solderneer/Documents/Projects/todo-cli/todocli.sublime-project",
 		"/Users/solderneer/Library/Application Support/Sublime Text 3/Packages/User/SublimeClang.sublime-settings",
 		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/main.css",
 		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/js/material-photo-gallery.js",
@@ -354,134 +319,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "src/todolist.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2065,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1618,
-								1618
-							]
-						],
-						"settings":
-						{
-							"auto_name": "#include \"todolist.h\"",
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1114.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "inc/todolist.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 774,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								38,
-								38
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/main.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 879,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								655,
-								655
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "todocli.sublime-project",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 278,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								269,
-								269
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/zzz A File Icon zzz/aliases/JSON (Sublime).sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				}
 			]
 		}
 	],
