@@ -17,7 +17,7 @@
 int main(void) {
 
     WINDOW * mainwin;
-
+    int ch;
     
     /*  Initialize ncurses  */
 
@@ -26,14 +26,27 @@ int main(void) {
     exit(EXIT_FAILURE);
     }
 
+    raw();
+    noecho();
+    keypad(stdscr, TRUE);
 
-    /*  Display "Hello, world!" in the centre of the
-    screen, call refresh() to show our changes, and
-    sleep() for a few seconds to get the full screen effect  */
+    printw("Type any character to see it in bold\n");
+    while(1)
+    {
+        ch = getch();
 
-    mvaddstr(13, 33, "Hello, world!");
-    refresh();
-    sleep(3);
+        if(ch == KEY_F(1))
+        {
+            break;
+        }
+        else
+        {
+            attrset(A_BOLD);
+            printw("%c", ch);
+            attroff(A_BOLD);
+        }
+        refresh();
+    }
 
 
     /*  Clean up after ourselves  */
