@@ -3,9 +3,8 @@
 #include <string>
 #include <fstream>
 
-#include "todolist.h"
-
 int main(void)
 {
-    
+    std::cout << "Welcome to the todolist app" << std::endl;
+    std::cout << "Checking for the .todolist list" << std::endl;
 }
