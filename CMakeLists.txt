@@ -6,4 +6,4 @@ include_directories(${CURSES_INCLUDE_DIR} include)
 file(GLOB SOURCES "src/*.cpp")
 
 add_executable(todocli ${SOURCES})
-target_link_libraries(main ${CURSES_LIBRARIES})
+target_link_libraries(todocli ${CURSES_LIBRARIES})

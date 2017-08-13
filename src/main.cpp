@@ -24,7 +24,7 @@ int main(void) {
     {
         ch = getch();
 
-        if(ch == KEY_F(1))
+        if(ch == 'q')
         {
             break;
         }
