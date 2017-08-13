@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"print",
+				"printw\tint printw(const char *, ...)"
+			],
+			[
 				"null",
 				"nullptr"
 			],
@@ -218,15 +222,20 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/solderneer/Documents/Projects/todo-cli"
+		"/Users/solderneer/Documents/Projects/todo-cli",
+		"/Users/solderneer/Documents/Projects/todo-cli/src"
 	],
 	"file_history":
 	[
-		"/Users/solderneer/Documents/Projects/todo-cli/todocli.sublime-project",
+		"/Users/solderneer/Documents/Projects/todo-cli/src/todoelement.h",
 		"/Users/solderneer/Documents/Projects/todo-cli/src/main.cpp",
+		"/usr/include/stdlib.h",
+		"/usr/include/stdio.h",
+		"/usr/include/curses.h",
+		"/Users/solderneer/Documents/Projects/todo-cli/src/todolist.cpp",
+		"/Users/solderneer/Documents/Projects/todo-cli/todocli.sublime-project",
 		"/Users/solderneer/Documents/Projects/todo-cli/inc/todolist.h",
 		"/Users/solderneer/Documents/Projects/todo-cli/.gitignore",
-		"/Users/solderneer/Documents/Projects/todo-cli/src/todolist.cpp",
 		"/Users/solderneer/Documents/Projects/todo-cli/.gdb_history",
 		"/Users/solderneer/Documents/Projects/todo-cli/src/todolist.h",
 		"/Users/solderneer/Documents/Projects/todo-cli/main.cpp",
