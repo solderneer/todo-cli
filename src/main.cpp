@@ -30,9 +30,9 @@ int main(void) {
         }
         else
         {
-            attrset(A_BOLD);
+            attrset(A_BOLD | A_BLINK);
             printw("%c", ch);
-            attroff(A_BOLD);
+            attroff(A_BOLD | A_BLINK);
         }
         refresh();
     }
