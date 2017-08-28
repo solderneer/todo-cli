@@ -2,12 +2,17 @@
 #include <stdio.h>
 #include <unistd.h>                  /*  for sleep()  */
 #include <curses.h>
+#include <vector>
+
+#define version "1.0.0"
 
 int main(void) {
 
     WINDOW * mainwin;
     int ch;
-    
+    int row, column, count;
+    std::vector<char> char_array;
+
     /*  Initialize ncurses  */
 
     if ( (mainwin = initscr()) == NULL ) {
@@ -18,10 +23,15 @@ int main(void) {
     raw();
     noecho();
     keypad(stdscr, TRUE);
+    getmaxyx(stdscr, row, column);
 
-    printw("Type any character to see it in bold\n");
+    attrset(A_STANDOUT);
+    printw("todo-cli version %s", version);
+    attroff(A_STANDOUT);
+
     while(1)
     {
+        count = 0;
         ch = getch();
 
         if(ch == 'q')
@@ -30,11 +40,25 @@ int main(void) {
         }
         else
         {
+            char_array.push_back(ch);
             attrset(A_BOLD | A_BLINK);
-            printw("%c", ch);
+            while(count <  char_array.size())
+            {
+                if((char_array.size()-1)%2 == 0)
+                {
+                    mvprintw(row/2, column/2 - (char_array.size()-1)/2, "%c", char_array[count]);
+                }
+                else
+                {
+                    mvprintw(row/2, column/2 + char_array.size(), "%c", char_array[count]);
+                }
+                count++;
+
+            }
             attroff(A_BOLD | A_BLINK);
         }
         refresh();
+        count++;
     }
 
 
