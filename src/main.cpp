@@ -24,6 +24,8 @@ int main(void) {
     noecho();
     keypad(stdscr, TRUE);
     getmaxyx(stdscr, row, column);
+    column /= 2;
+    row /= 2;
 
     attrset(A_STANDOUT);
     printw("todo-cli version %s", version);
@@ -41,19 +43,15 @@ int main(void) {
         else
         {
             char_array.push_back(ch);
+            if((char_array.size()-1) % 2 == 0)
+            {
+                column = column - 1;
+            }
             attrset(A_BOLD | A_BLINK);
             while(count <  char_array.size())
             {
-                if((char_array.size()-1)%2 == 0)
-                {
-                    mvprintw(row/2, column/2 - (char_array.size()-1)/2, "%c", char_array[count]);
-                }
-                else
-                {
-                    mvprintw(row/2, column/2 + char_array.size(), "%c", char_array[count]);
-                }
+                mvprintw(row/2, column + count, "%c", char_array[count]);
                 count++;
-
             }
             attroff(A_BOLD | A_BLINK);
         }
