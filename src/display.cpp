@@ -1,70 +1,80 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>                  /*  for sleep()  */
-#include <curses.h>
-#include <vector>
+#include <ncurses.h>
 
-#define version "1.0.0"
+WINDOW *create_newwin(int height, int width, int starty, int startx);
+void destroy_win(WINDOW *local_win);
 
-int main(void) {
-
-    WINDOW * mainwin;
+int main(int argc, char *argv[])
+{
+    WINDOW *my_win;
+    int startx, starty, width, height, row, column, speed;
     int ch;
-    int row, column, count;
-    std::vector<char> char_array;
 
-    /*  Initialize ncurses  */
-
-    if ( (mainwin = initscr()) == NULL ) {
-    fprintf(stderr, "Error initialising ncurses.\n");
-    exit(EXIT_FAILURE);
-    }
-
-    raw();
-    noecho();
+    initscr();
+    cbreak();
     keypad(stdscr, TRUE);
-    getmaxyx(stdscr, row, column);
-    column /= 2;
-    row /= 2;
 
-    attrset(A_STANDOUT);
-    printw("todo-cli version %s", version);
-    attroff(A_STANDOUT);
-
-    while(1)
-    {
-        count = 0;
-        ch = getch();
-
-        if(ch == 'q')
-        {
-            break;
-        }
-        else
-        {
-            char_array.push_back(ch);
-            if((char_array.size()-1) % 2 == 0)
-            {
-                column = column - 1;
-            }
-            attrset(A_BOLD | A_BLINK);
-            while(count <  char_array.size())
-            {
-                mvprintw(row/2, column + count, "%c", char_array[count]);
-                count++;
-            }
-            attroff(A_BOLD | A_BLINK);
-        }
-        refresh();
-        count++;
-    }
-
-
-    /*  Clean up after ourselves  */
-
-    delwin(mainwin);
-    endwin();
+    height = 4;
+    width = 10;
+    speed = 2;
+    starty = (LINES - height) / 2;
+    startx = (COLS - width) / 2;
+    printw("Press F1 to exit");
     refresh();
+    my_win = create_newwin(height, width, starty, startx);
+    getmaxyx(stdscr, row, column);
 
-    return EXIT_SUCCESS;
+    while((ch = getch()) != 'q')
+    {
+        switch(ch)
+        {
+            case KEY_LEFT:
+                if(startx <= 0)
+                    break;
+                destroy_win(my_win);
+                startx -= speed;
+                my_win = create_newwin(height, width, starty, startx);
+                break;
+            case KEY_RIGHT:
+                if((startx+width) == column)
+                    break;
+                destroy_win(my_win);
+                startx += speed;
+                my_win = create_newwin(height, width, starty, startx);
+                break;
+            case KEY_UP:
+                if(starty <= 0)
+                    break;
+                destroy_win(my_win);
+                starty -= speed;
+                my_win = create_newwin(height, width, starty,startx);
+                break;
+            case KEY_DOWN:
+                if((starty+height) == row)
+                    break;
+                destroy_win(my_win);
+                starty += speed;
+                my_win = create_newwin(height, width, starty,startx);
+                break;
+        }
+    }
+    endwin();
+    return 0;
+}
+
+WINDOW *create_newwin(int height, int width, int starty, int startx)
+{
+    WINDOW *local_win;
+
+    local_win = newwin(height, width, starty, startx);
+    wborder(local_win,'|','|','-','-','+','+','+','+');
+    wrefresh(local_win);
+
+    return local_win;
+}
+
+void destroy_win(WINDOW *local_win)
+{
+    wborder(local_win, ' ', ' ', ' ',' ',' ',' ',' ',' ');
+    wrefresh(local_win);
+    delwin(local_win);
 }
