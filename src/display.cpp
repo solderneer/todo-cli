@@ -1,80 +1,28 @@
-#include <ncurses.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>                  /*  for sleep()  */
+#include <curses.h>
+#include <vector>
 
-WINDOW *create_newwin(int height, int width, int starty, int startx);
-void destroy_win(WINDOW *local_win);
+#define version "1.0.0"
 
-int main(int argc, char *argv[])
+void DisplayInit(WINDOW* mainwin)
 {
-    WINDOW *my_win;
-    int startx, starty, width, height, row, column, speed;
-    int ch;
+    if((mainwin = initscr()) == NULL)
+    {
+        fprintf(stderr, "Error initialising ncurses\n");
+        exit(EXIT_FAILURE);
+    }
 
-    initscr();
-    cbreak();
+    raw();
+    noecho();
     keypad(stdscr, TRUE);
 
-    height = 4;
-    width = 10;
-    speed = 2;
-    starty = (LINES - height) / 2;
-    startx = (COLS - width) / 2;
-    printw("Press F1 to exit");
-    refresh();
-    my_win = create_newwin(height, width, starty, startx);
-    getmaxyx(stdscr, row, column);
+}
 
-    while((ch = getch()) != 'q')
-    {
-        switch(ch)
-        {
-            case KEY_LEFT:
-                if(startx <= 0)
-                    break;
-                destroy_win(my_win);
-                startx -= speed;
-                my_win = create_newwin(height, width, starty, startx);
-                break;
-            case KEY_RIGHT:
-                if((startx+width) == column)
-                    break;
-                destroy_win(my_win);
-                startx += speed;
-                my_win = create_newwin(height, width, starty, startx);
-                break;
-            case KEY_UP:
-                if(starty <= 0)
-                    break;
-                destroy_win(my_win);
-                starty -= speed;
-                my_win = create_newwin(height, width, starty,startx);
-                break;
-            case KEY_DOWN:
-                if((starty+height) == row)
-                    break;
-                destroy_win(my_win);
-                starty += speed;
-                my_win = create_newwin(height, width, starty,startx);
-                break;
-        }
-    }
+void DisplayEnd(WINDOW* mainwin)
+{
+    delwin(mainwin);
     endwin();
-    return 0;
-}
-
-WINDOW *create_newwin(int height, int width, int starty, int startx)
-{
-    WINDOW *local_win;
-
-    local_win = newwin(height, width, starty, startx);
-    wborder(local_win,'|','|','-','-','+','+','+','+');
-    wrefresh(local_win);
-
-    return local_win;
-}
-
-void destroy_win(WINDOW *local_win)
-{
-    wborder(local_win, ' ', ' ', ' ',' ',' ',' ',' ',' ');
-    wrefresh(local_win);
-    delwin(local_win);
+    refresh();
 }
