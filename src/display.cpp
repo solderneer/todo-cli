@@ -4,7 +4,7 @@
 #include <curses.h>
 #include <vector>
 
-#define version "1.0.0"
+#include "display.h"
 
 void DisplayInit(WINDOW* mainwin)
 {
