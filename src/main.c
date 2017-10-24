@@ -1,4 +1,5 @@
 #include <ncurses.h>
+#include "topbar.h"
 
 int main()
 {
@@ -9,9 +10,16 @@ int main()
     keypad(stdscr, TRUE);
     noecho();
 
-    printw("Type any character to see it in bold\n");
-    refresh();
-    getch();
+    topbarInit();
+    while(1)
+    {
+        int input = getch();
+        if(input == KEY_RESIZE)
+        {
+            //topbarResize();
+            printw("boo");
+        }
+    }
     endwin();
 
     return 0;
