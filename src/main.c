@@ -11,15 +11,7 @@ int main()
     noecho();
 
     topbarInit();
-    while(1)
-    {
-        int input = getch();
-        if(input == KEY_RESIZE)
-        {
-            //topbarResize();
-            printw("boo");
-        }
-    }
+    getch();
     endwin();
 
     return 0;

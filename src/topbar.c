@@ -9,9 +9,10 @@ void topbarInit(void)
 {
     int term_width, term_height;
     //getmaxyz(stdscr, term_width, term_height);
-    topbarWin = newwin(3, COLS, 0, 0);
-    box(topbarWin, 0, 0);
-    wrefresh(topbarWin);
+    topbarWin = newwin(10, COLS, 0, 0);
+    box(topbarWin, '+', '-');
+    refresh();
+
 }
 
 void topbarResize()
