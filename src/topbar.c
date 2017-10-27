@@ -2,12 +2,20 @@
 #include "topbar.h"
 
 WINDOW* topbar;
-void topbarInit(void)
+void topbar_init(void)
 {
-    topbar = create_newwin(3, COLS, 0, 0);
+    init_pair(1, COLOR_BLACK, COLOR_WHITE);
+    topbar = newwin(3, COLS, 0, 0);
+    wattrset(topbar, A_STANDOUT);
+    wprintw(topbar,"Hello World!");
+    wrefresh(topbar);
 }
 
-
+void topbar_destroy(void)
+{
+    wrefresh(topbar);
+    delwin(topbar);
+}
 
 WINDOW *create_newwin(int height, int width, int starty, int startx)
 {
@@ -20,11 +28,6 @@ WINDOW *create_newwin(int height, int width, int starty, int startx)
     return local_win;
 }
 
-void destroy_win(WINDOW* local_win)
-{
-    wborder(local_win, ' ', ' ', ' ',' ',' ',' ',' ',' ');
-    wrefresh(local_win);
-    delwin(local_win);
-}
+
 
 

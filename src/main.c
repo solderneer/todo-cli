@@ -10,15 +10,13 @@ int main()
     initscr();
     cbreak();
     keypad(stdscr, TRUE);
+    start_color();
 
-    height = 3;
-    width = 10;
-    starty = (LINES - height) / 2;
-    startx = (COLS - width) / 2;
-    printw("Press F1 to exit");
     refresh();
-    topbarInit();
+    topbar_init();
     getch();
+
+    topbar_destroy();
     endwin();/* End curses mode		  */
     return 0;
 }
