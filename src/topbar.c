@@ -1,23 +1,30 @@
 #include <ncurses.h>
 #include "topbar.h"
 
-// Global declarations go here
-WINDOW* topbarWin;
-
-// Function definitions
+WINDOW* topbar;
 void topbarInit(void)
 {
-    int term_width, term_height;
-    //getmaxyz(stdscr, term_width, term_height);
-    topbarWin = newwin(10, COLS, 0, 0);
-    box(topbarWin, '+', '-');
-    refresh();
-
+    topbar = create_newwin(3, COLS, 0, 0);
 }
 
-void topbarResize()
+
+
+WINDOW *create_newwin(int height, int width, int starty, int startx)
 {
-    wresize(topbarWin, 3, COLS);
-    wrefresh(topbarWin);
+    WINDOW *local_win;
+
+    local_win = newwin(height, width, starty, startx);
+    box(local_win, 0 , 0);
+    wrefresh(local_win);
+
+    return local_win;
 }
+
+void destroy_win(WINDOW* local_win)
+{
+    wborder(local_win, ' ', ' ', ' ',' ',' ',' ',' ',' ');
+    wrefresh(local_win);
+    delwin(local_win);
+}
+
 
