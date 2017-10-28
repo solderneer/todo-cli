@@ -2,12 +2,17 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
+#include <time.h>
 #include "topbar.h"
 
+// Global Variables
 WINDOW* topbar;
 static int singleton = 0;
 
+// Function Prototypes
 char* itoa (int value, char *result, int base);
+void get24hTime(char* returnTime);
+void getDayDate(char* time);
 
 error_t topbar_init(void)
 {
@@ -18,7 +23,10 @@ error_t topbar_init(void)
         wattrset(topbar, A_STANDOUT);
 
         char* width = (char* )malloc(sizeof(char) * (int)log10(COLS/2 - 3));
+
         char escape[50] = "%s %";
+        char currentTime[7];
+        char DayDate[20];
         itoa((COLS/2-3), width, 10);
 
         strcat(escape, width);
@@ -26,7 +34,8 @@ error_t topbar_init(void)
         strcat(escape, width);
         strcat(escape, "s ");
 
-        wprintw(topbar,escape," "," "," ");
+        get24hTime(currentTime);
+        wprintw(topbar, escape, currentTime," "," ");
         wrefresh(topbar);
 
         singleton++;
@@ -71,6 +80,16 @@ char* itoa (int value, char *result, int base)
     }
     return result;
 }
+
+void get24hTime(char* returnTime)
+{
+    // TODO: Haven't implemented check to prevent overflow
+    time_t now  = time(NULL);
+    struct tm* currentTime = localtime(&now);
+
+    sprintf(returnTime, "%d:%d", currentTime->tm_hour, currentTime->tm_min);
+}
+
 
 
 
