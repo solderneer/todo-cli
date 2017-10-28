@@ -13,6 +13,7 @@ static int singleton = 0;
 char* itoa (int value, char *result, int base);
 void get24hTime(char* returnTime);
 void getDayDate(char* dayDate);
+void calculateSpacing(char* escape);
 
 error_t topbar_init(void)
 {
@@ -22,21 +23,14 @@ error_t topbar_init(void)
         topbar = newwin(3, COLS, 0, 0);
         wattrset(topbar, A_STANDOUT);
 
-        char escape[50] = "%s %";
+        char escape[20];
         char currentTime[20];
         char dayDate[20];
 
         get24hTime(currentTime);
         getDayDate(dayDate);
+        calculateSpacing(escape);
 
-        char* width = (char* )malloc(sizeof(char) * (int)log10((COLS-14)/2));
-        itoa(((COLS-14)/2), width, 10);
-        strcat(escape, width);
-        strcat(escape, "s %");
-        strcat(escape, width);
-        strcat(escape, "s ");
-
-        get24hTime(currentTime);
         wprintw(topbar, escape, currentTime,"todocli 2.4.2 ", dayDate);
         wrefresh(topbar);
 
@@ -97,7 +91,14 @@ void getDayDate(char* dayDate)
     strftime(dayDate, 20, "%a, %b %d", localtime(&now));
 }
 
+void calculateSpacing(char* escape)
+{
+    char* width = (char* )malloc(sizeof(char) * (int)log10((COLS-14)/2));
+    itoa(((COLS-14)/2), width, 10);
 
-
-
-
+    strcat(escape, "%s %");
+    strcat(escape, width);
+    strcat(escape, "s %");
+    strcat(escape, width);
+    strcat(escape, "s ");
+}
