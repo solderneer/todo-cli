@@ -23,7 +23,7 @@ error_t topbar_init(void)
         topbar = newwin(3, COLS, 0, 0);
         wattrset(topbar, A_STANDOUT);
 
-        char escape[20];
+        char escape[50];
         char currentTime[20];
         char dayDate[20];
 
@@ -51,6 +51,23 @@ error_t topbar_destroy(void)
     singleton--;
     return SUCCESS;
 }
+
+error_t topbar_refresh(void)
+{
+        char escape[50];
+        char currentTime[20];
+        char dayDate[20];
+
+        get24hTime(currentTime);
+        getDayDate(dayDate);
+        calculateSpacing(escape);
+
+        wprintw(topbar, escape, currentTime,"todocli 2.4.2 ", dayDate);
+        wrefresh(topbar);
+
+        return SUCCESS;
+}
+
 
 char* itoa (int value, char *result, int base)
 {

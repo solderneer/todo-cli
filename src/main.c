@@ -14,7 +14,12 @@ int main()
 
     refresh();
     topbar_init();
-    getch();
+
+    while(1)
+    {
+        topbar_destroy();
+        topbar_init();
+    }
 
     topbar_destroy();
     endwin();/* End curses mode		  */
