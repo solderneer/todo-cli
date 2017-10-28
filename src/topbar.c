@@ -12,7 +12,7 @@ static int singleton = 0;
 // Function Prototypes
 char* itoa (int value, char *result, int base);
 void get24hTime(char* returnTime);
-void getDayDate(char* time);
+void getDayDate(char* dayDate);
 
 error_t topbar_init(void)
 {
@@ -22,20 +22,22 @@ error_t topbar_init(void)
         topbar = newwin(3, COLS, 0, 0);
         wattrset(topbar, A_STANDOUT);
 
-        char* width = (char* )malloc(sizeof(char) * (int)log10(COLS/2 - 3));
-
         char escape[50] = "%s %";
-        char currentTime[7];
-        char DayDate[20];
-        itoa((COLS/2-3), width, 10);
+        char currentTime[20];
+        char dayDate[20];
 
+        get24hTime(currentTime);
+        getDayDate(dayDate);
+
+        char* width = (char* )malloc(sizeof(char) * (int)log10((COLS-14)/2));
+        itoa(((COLS-14)/2), width, 10);
         strcat(escape, width);
         strcat(escape, "s %");
         strcat(escape, width);
         strcat(escape, "s ");
 
         get24hTime(currentTime);
-        wprintw(topbar, escape, currentTime," "," ");
+        wprintw(topbar, escape, currentTime,"todocli 2.4.2 ", dayDate);
         wrefresh(topbar);
 
         singleton++;
@@ -85,12 +87,15 @@ void get24hTime(char* returnTime)
 {
     // TODO: Haven't implemented check to prevent overflow
     time_t now  = time(NULL);
-    struct tm* currentTime = localtime(&now);
-
-    sprintf(returnTime, "%d:%d", currentTime->tm_hour, currentTime->tm_min);
+    strftime(returnTime, 20, "%r", localtime(&now));
 }
 
-
+void getDayDate(char* dayDate)
+{
+    // TODO: Haven't implemented check to prevent overflow
+    time_t now = time(NULL);
+    strftime(dayDate, 20, "%a, %b %d", localtime(&now));
+}
 
 
 
