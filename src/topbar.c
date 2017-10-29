@@ -20,7 +20,7 @@ error_t topbar_init(void)
     if(singleton == 0)
     {
         init_pair(1, COLOR_BLACK, COLOR_WHITE);
-        topbar = newwin(3, COLS, 0, 0);
+        topbar = newwin(1, COLS, 0, 0);
         wattrset(topbar, A_STANDOUT);
 
         char escape[50];
