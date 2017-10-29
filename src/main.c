@@ -17,10 +17,10 @@ int main()
 
     while(1)
     {
-        topbar_destroy();
-        topbar_init();
+       topbar_refresh();
     }
 
+    getch();
     topbar_destroy();
     endwin();/* End curses mode		  */
     return 0;

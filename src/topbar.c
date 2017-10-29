@@ -30,6 +30,7 @@ error_t topbar_init(void)
         get24hTime(currentTime);
         getDayDate(dayDate);
         calculateSpacing(escape);
+        calculateSpacing(escape);
 
         wprintw(topbar, escape, currentTime,"todocli 2.4.2 ", dayDate);
         wrefresh(topbar);
@@ -62,7 +63,7 @@ error_t topbar_refresh(void)
         getDayDate(dayDate);
         calculateSpacing(escape);
 
-        wprintw(topbar, escape, currentTime,"todocli 2.4.2 ", dayDate);
+        mvwprintw(topbar,0,0, escape, currentTime,"todocli 2.4.2 ", dayDate);
         wrefresh(topbar);
 
         return SUCCESS;
@@ -113,9 +114,12 @@ void calculateSpacing(char* escape)
     char* width = (char* )malloc(sizeof(char) * (int)log10((COLS-14)/2));
     itoa(((COLS-14)/2), width, 10);
 
+    memset(&escape[0], 0, sizeof(escape));
     strcat(escape, "%s %");
     strcat(escape, width);
     strcat(escape, "s %");
     strcat(escape, width);
     strcat(escape, "s ");
+
+    free(width);
 }
