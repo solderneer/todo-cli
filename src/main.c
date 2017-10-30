@@ -1,5 +1,6 @@
 #include <ncurses.h>
 #include "topbar.h"
+#include "leftwin.h"
 
 int main()
 {
@@ -11,9 +12,11 @@ int main()
     cbreak();
     keypad(stdscr, TRUE);
     start_color();
+    init_pair(1, COLOR_BLACK, COLOR_WHITE);
 
     refresh();
     topbar_init();
+    leftwin_init();
 
     while(1)
     {

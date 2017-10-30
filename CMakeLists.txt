@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 2.8) 
-project(main)
+project(todocli)
+set(TODOCLI_VERSION_MAJOR 1)
+set(TODOCLI_VERSION_MINOR 0)
 
 find_package(Curses REQUIRED)
 include_directories(${CURSES_INCLUDE_DIR} include)

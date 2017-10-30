@@ -3,7 +3,9 @@
 #include <math.h>
 #include <string.h>
 #include <time.h>
+
 #include "topbar.h"
+#include "config.h"
 
 // Global Variables
 WINDOW* topbar;
@@ -30,9 +32,8 @@ error_t topbar_init(void)
         get24hTime(currentTime);
         getDayDate(dayDate);
         calculateSpacing(escape);
-        calculateSpacing(escape);
 
-        wprintw(topbar, escape, currentTime,"todocli 2.4.2 ", dayDate);
+        wprintw(topbar, escape, currentTime, "todocli 2.4.2", dayDate);
         wrefresh(topbar);
 
         singleton++;
@@ -57,13 +58,13 @@ error_t topbar_refresh(void)
 {
         char escape[50];
         char currentTime[20];
-        char dayDate[20];
+        char dayDate[20]; 
 
         get24hTime(currentTime);
         getDayDate(dayDate);
         calculateSpacing(escape);
-
-        mvwprintw(topbar,0,0, escape, currentTime,"todocli 2.4.2 ", dayDate);
+ 
+        mvwprintw(topbar,0,0, escape, currentTime, "todocli 2.4.2", dayDate);
         wrefresh(topbar);
 
         return SUCCESS;

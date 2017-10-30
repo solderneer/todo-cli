@@ -1,7 +1,9 @@
 #ifndef LEFTWIN_H
 #define LEFTWIN_H
 
-void leftwin_init(void);
-void leftwin_destroy(void);
+#include "config.h"
+
+error_t leftwin_init(void);
+error_t leftwin_destroy(void);
 
 #endif
