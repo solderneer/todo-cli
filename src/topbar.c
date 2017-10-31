@@ -113,7 +113,7 @@ void getDayDate(char* dayDate)
 void calculateSpacing(char* escape)
 {
     char* width = (char* )malloc(sizeof(char) * (int)log10((COLS-14)/2));
-    itoa(((COLS-14)/2), width, 10);
+    itoa(((COLS-13)/2), width, 10);
 
     memset(&escape[0], 0, sizeof(escape));
     strcat(escape, "%s %");

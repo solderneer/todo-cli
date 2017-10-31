@@ -10,6 +10,7 @@ int main()
 
     initscr();
     cbreak();
+    noecho();
     keypad(stdscr, TRUE);
     start_color();
     init_pair(1, COLOR_BLACK, COLOR_WHITE);
@@ -18,13 +19,11 @@ int main()
     topbar_init();
     leftwin_init();
 
-    while(1)
-    {
-       topbar_refresh();
-    }
+    leftwin_refresh();
 
     getch();
     topbar_destroy();
+    leftwin_destroy();
     endwin();/* End curses mode		  */
     return 0;
 }
