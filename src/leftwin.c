@@ -37,11 +37,11 @@ error_t leftwin_init(void)
         n_choices = ARRAY_SIZE(options);
         my_items = (ITEM **)calloc(n_choices, sizeof(ITEM *));
         for(i = 0; i < n_choices; ++i)
-            my_items[i] = new_item(options[i], options[i]);
+            my_items[i] = new_item(options[i], NULL);
 
         my_menu = new_menu((ITEM **)my_items);
         set_menu_win(my_menu, leftwin);
-        set_menu_sub(my_menu, derwin(leftwin, 6, 38, 3, 1));
+        set_menu_sub(my_menu, derwin(leftwin, 6, 60, 1, 1));
         set_menu_mark(my_menu, " * ");
 
         post_menu(my_menu);
