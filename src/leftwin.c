@@ -1,6 +1,8 @@
 #include <curses.h>
 #include <stdlib.h>
 #include <menu.h>
+#include <string.h>
+#include <math.h>
 
 #include "leftwin.h"
 #include "config.h"
@@ -14,6 +16,7 @@ static int singleton = 0;
 int n_choices, i;
 
 char* options[] = {
+                    "Add new item...",
                     "Choice 1",
                     "Choice 2",
                     "Choice 3",
@@ -22,6 +25,7 @@ char* options[] = {
                     (char* )NULL,
                 };
 // Private function declarations
+
 
 error_t leftwin_init(void)
 {
@@ -34,6 +38,8 @@ error_t leftwin_init(void)
         mvwvline(leftwin, 1, (COLS/2-2), '|', (LINES-3));
         wattroff(leftwin, A_STANDOUT);
 
+        processTodoList();
+
         n_choices = ARRAY_SIZE(options);
         my_items = (ITEM **)calloc(n_choices, sizeof(ITEM *));
         for(i = 0; i < n_choices; ++i)
@@ -41,13 +47,9 @@ error_t leftwin_init(void)
 
         my_menu = new_menu((ITEM **)my_items);
 
-        set_menu_fore(my_menu, COLOR_PAIR(1) | A_REVERSE);
-        set_menu_back(my_menu, COLOR_PAIR(2));
-        set_menu_grey(my_menu, COLOR_PAIR(3));
-
         set_menu_win(my_menu, leftwin);
         set_menu_sub(my_menu, derwin(leftwin, LINES, (COLS/2-1), 1, 1));
-        set_menu_mark(my_menu, " * ");
+        set_menu_mark(my_menu, "");
 
         post_menu(my_menu);
         wrefresh(leftwin);
@@ -95,3 +97,35 @@ error_t leftwin_destroy(void)
     singleton--;
     return SUCCESS;
 }
+
+void processTodoList(void)
+{
+    int i;
+    char spacing[1] = " ";
+
+    //printf("%lu", ARRAY_SIZE(options));
+    for(i = 0; i < (ARRAY_SIZE(options)-1); i++)
+    {
+        int sizeofString = strlen(options[i]);
+        int centerPadding = ((LINES/2 - 2) - sizeofString)/2;
+        int m = 0;
+
+        char* placeholder = (char* )malloc(sizeof(char) * (int)log10((LINES/2 - 2)));
+
+        for(m = 0; m < centerPadding; m++)
+        {
+            strcat(placeholder, spacing);
+        }
+
+        strcat(placeholder, options[i]);
+        m = 0;
+
+        for(m = 0; m < centerPadding; m++)
+        {
+            strcat(placeholder, spacing);
+        }
+
+       wprintw(leftwin,"%s", placeholder);
+    }
+}
+
