@@ -65,7 +65,6 @@ error_t leftwin_init(void)
 
 error_t leftwin_refresh(void)
 {
-    int c;
     while((c = wgetch(leftwin)) != KEY_F(1))
     {
         switch(c)
