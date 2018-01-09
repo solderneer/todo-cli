@@ -13,7 +13,7 @@ WINDOW* leftwin;
 ITEM** my_items;
 MENU* my_menu;
 static int singleton = 0;
-int n_choices, i;
+int n_choices, i, c;
 
 char* options[] = {
                     "Add new item...",
