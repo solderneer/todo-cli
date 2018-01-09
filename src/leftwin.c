@@ -8,12 +8,13 @@
 #include "config.h"
 
 #define ARRAY_SIZE(a) (sizeof(a) / sizeof(a[0]))
+
 // Global Variables
 WINDOW* leftwin;
 ITEM** my_items;
 MENU* my_menu;
 static int singleton = 0;
-int n_choices, i, c;
+int n_choices, i;
 
 char* options[] = {
                     "Add new item...",
@@ -37,8 +38,14 @@ error_t leftwin_init(void)
         wattron(leftwin, A_STANDOUT);
         mvwvline(leftwin, 1, (COLS/2-2), '|', (LINES-3));
         wattroff(leftwin, A_STANDOUT);
+        n_choices = ARRAY_SIZE(options);
 
-        processTodoList();
+        char **proc_options;
+        proc_options = (char **)malloc((n_choices) * sizeof(char*));
+        for(int row = 0; row < (n_choices); row++)
+                proc_options[row] = (char *)malloc(LINES/2 * sizeof(char));
+
+        processTodoList(proc_options);
 
         n_choices = ARRAY_SIZE(options);
         my_items = (ITEM **)calloc(n_choices, sizeof(ITEM *));
@@ -65,6 +72,7 @@ error_t leftwin_init(void)
 
 error_t leftwin_refresh(void)
 {
+    int c;
     while((c = wgetch(leftwin)) != KEY_F(1))
     {
         switch(c)
@@ -97,7 +105,7 @@ error_t leftwin_destroy(void)
     return SUCCESS;
 }
 
-void processTodoList(void)
+void processTodoList(char **proc_options)
 {
     int i;
     char spacing[1] = " ";
@@ -124,7 +132,7 @@ void processTodoList(void)
             strcat(placeholder, spacing);
         }
 
-       wprintw(leftwin,"%s", placeholder);
+        proc_options[i] = placeholder;
     }
 }
 

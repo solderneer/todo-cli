@@ -8,5 +8,5 @@ error_t leftwin_destroy(void);
 error_t leftwin_refresh(void);
 
 // Test
-void processTodoList(void);
+void processTodoList(char** proc_options);
 #endif

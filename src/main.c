@@ -19,11 +19,12 @@ int main()
     topbar_init();
     leftwin_init();
 
-    leftwin_refresh();
+    while(1)
+        topbar_refresh();
 
     getch();
     topbar_destroy();
     leftwin_destroy();
-    endwin();/* End curses mode		  */
+    endwin(); /* End curses mode */
     return 0;
 }

@@ -11,7 +11,7 @@
 WINDOW* topbar;
 static int singleton = 0;
 
-// Function Prototypes
+// Private function prototypes
 char* itoa (int value, char *result, int base);
 void get24hTime(char* returnTime);
 void getDayDate(char* dayDate);
