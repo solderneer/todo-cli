@@ -16,7 +16,7 @@ MENU* my_menu;
 static int singleton = 0;
 int n_choices, i;
 
-char* options[] = {
+char *options[] = {
                     "Add new item...",
                     "Choice 1",
                     "Choice 2",
@@ -25,6 +25,8 @@ char* options[] = {
                     "Exit",
                     (char* )NULL,
                 };
+
+char **proc_options;
 // Private function declarations
 
 
@@ -40,12 +42,13 @@ error_t leftwin_init(void)
         wattroff(leftwin, A_STANDOUT);
         n_choices = ARRAY_SIZE(options);
 
-        char **proc_options;
-        proc_options = (char **)malloc((n_choices) * sizeof(char*));
-        for(int row = 0; row < (n_choices); row++)
-                proc_options[row] = (char *)malloc(LINES/2 * sizeof(char));
-
-        processTodoList(proc_options);
+       /* TODO: Implement even padding for options
+        * char **proc_options;
+        * proc_options = (char **)malloc((n_choices) * sizeof(char*));
+        * for(int row = 0; row < (n_choices); row++)
+        *        proc_options[row] = (char *)malloc(LINES/2 * sizeof(char));
+        * processTodoList(proc_options);
+        */
 
         n_choices = ARRAY_SIZE(options);
         my_items = (ITEM **)calloc(n_choices, sizeof(ITEM *));
@@ -105,6 +108,7 @@ error_t leftwin_destroy(void)
     return SUCCESS;
 }
 
+// TODO: Apply padding to the options for neater displaying
 void processTodoList(char **proc_options)
 {
     int i;

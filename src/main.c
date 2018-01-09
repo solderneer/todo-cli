@@ -18,9 +18,7 @@ int main()
     refresh();
     topbar_init();
     leftwin_init();
-
-    while(1)
-        topbar_refresh();
+    leftwin_refresh();
 
     getch();
     topbar_destroy();
