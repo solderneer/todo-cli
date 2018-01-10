@@ -108,6 +108,11 @@ error_t leftwin_destroy(void)
     return SUCCESS;
 }
 
+void leftwin_returnSelected()
+{
+
+}
+
 // TODO: Apply padding to the options for neater displaying
 void processTodoList(char **proc_options)
 {
